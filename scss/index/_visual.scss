@@ -1,0 +1,53 @@
+#visual {
+	padding-top: 120px;
+	figure {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+		.inner {
+			padding-top: 30px;
+			width: 1180px;
+			height: 100%;
+			margin: 0 auto;
+			display: flex;
+			justify-content: flex-end;
+			position: relative;
+			.visual_txt {
+				position: absolute;
+				left: 40px;
+				bottom: 250px;
+				.visual_title {
+					font: bold 100px/1 "arial";
+				}
+				.visual_detail {
+					margin-top: 20px;
+					font: bold 20px/1 "arial";
+				}
+				.visual_btn {
+					margin-top: 20px;
+					width: 220px;
+					padding: 10px;
+					border: none;
+					background: rgb(64, 197, 250);
+				}
+			}
+			video {
+				width: 80%;
+				height: 80%;
+				object-fit: cover;
+				margin-right: 20px;
+			}
+			.visual_column_txt {
+				height: 80%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				span {
+					writing-mode: vertical-lr;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

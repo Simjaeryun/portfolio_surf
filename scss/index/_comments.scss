@@ -1,0 +1,47 @@
+#comments {
+	width: 100%;
+	padding: 150px;
+	h1.comments_title {
+		font: bold 24px/1 "arial";
+		color: #555;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		position: relative;
+		.comments_list {
+			width: 100%;
+			.comments_list_column {
+				position: relative;
+				width: 100%;
+				border: 1px solid #ddd;
+				padding: 15px 20px;
+				margin-bottom: 20px;
+				a {
+					font: 18px/1 "arial";
+					color: #555;
+					float: left;
+				}
+				span {
+					float: right;
+					color: #888;
+					font: 14px/1 "arial";
+				}
+			}
+			.comments_list_column:hover {
+				background: #555;
+				a,
+				span {
+					color: #fff;
+				}
+			}
+			.comments_list_column::after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+		}
+	}
+}

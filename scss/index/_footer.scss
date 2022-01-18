@@ -1,0 +1,48 @@
+#footer {
+	width: 100%;
+	background: #444;
+	padding: 100px 0;
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		position: relative;
+		&::after,
+		ul.footer_nav {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		h1.footer_title {
+			float: left;
+			font: bold 24px/1 "arial";
+			color: #666;
+		}
+		ul.footer_nav {
+			float: right;
+			.footer_nav-btn {
+				float: left;
+				margin-left: 20px;
+				a {
+					font: bold 14px/1 "arial";
+					color: #666;
+				}
+			}
+		}
+		address {
+			float: left;
+			width: 100%;
+			font: 14px/1.3 "arial";
+			color: #777;
+			margin-bottom: 20px;
+			margin-top: 20px;
+			border-top: 1px solid #777;
+			padding-top: 20px;
+		}
+		p {
+			float: left;
+			font: 12px/1 "arial";
+			color: #777;
+			width: 100%;
+		}
+	}
+}

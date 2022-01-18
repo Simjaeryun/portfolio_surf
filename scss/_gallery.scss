@@ -1,0 +1,165 @@
+#gallery {
+	width: 100%;
+	position: relative;
+	#searchBox {
+		display: flex;
+		justify-content: center;
+		input[type="text"] {
+			padding: 15px;
+			border: none;
+			background: #555;
+			color: #fff;
+			border-radius: 10px;
+			font: bold 16px "arial";
+		}
+		input[type="text"]::placeholder {
+			color: #fff;
+		}
+		button {
+			border: none;
+			padding: 15px;
+			margin-left: 10px;
+			background: #555;
+			border-radius: 10px;
+			color: #fff;
+			cursor: pointer;
+			font: bold 16px "arial";
+		}
+	}
+	.wrap {
+		width: 100%;
+		padding: 50px;
+		position: relative;
+		.loading {
+			width: 100px;
+			position: absolute;
+			top: 110%;
+			left: 50%;
+			transform: translateX(-50%);
+			transition: 1s;
+			&.off {
+				opacity: 0;
+			}
+		}
+		.list {
+			width: 100%;
+			opacity: 0;
+			transform: translateY(100px);
+			transition: 1s;
+			&.on {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+			&::after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+			li {
+				float: left;
+				width: calc(100% / 4);
+				padding: 10px;
+				div {
+					width: 100%;
+					a {
+						display: block;
+						width: 100%;
+						height: 100%;
+						&:hover > img {
+							transform: scale(1.05);
+							box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+						}
+						> img {
+							border-radius: 10px;
+							width: 100%;
+							height: 100%;
+						}
+					}
+
+					p {
+						font: 12px/1.2 "arial";
+						color: #777;
+						margin-top: 10px;
+						margin-bottom: 10px;
+					}
+					span {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						img {
+							width: 40px;
+							height: 40px;
+							border-radius: 50%;
+							margin-right: 5px;
+						}
+						strong {
+							font: 12px/1 "arial";
+							color: orange;
+						}
+					}
+				}
+			}
+		}
+	}
+	aside {
+		width: 100%;
+		height: 100vh;
+		position: fixed;
+		left: 0;
+		top: 0;
+		background: rgba(0, 0, 0, 0.8);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		div {
+			img {
+				width: 100%;
+			}
+		}
+		span {
+			position: absolute;
+			top: 10px;
+			right: 40px;
+			color: #fff;
+			font-size: 50px;
+			cursor: pointer;
+		}
+	}
+}
+
+@media screen and (max-width: 999px) {
+	#gallery {
+		.wrap {
+			.list {
+				li {
+					width: calc(100% / 3);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 749px) {
+	#gallery {
+		.wrap {
+			.list {
+				li {
+					width: calc(100% / 2);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 539px) {
+	#gallery {
+		.wrap {
+			.list {
+				li {
+					width: calc(100%);
+				}
+			}
+		}
+	}
+}

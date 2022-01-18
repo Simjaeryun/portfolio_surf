@@ -1,0 +1,38 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: red;
+}
+
+ul,
+li,
+ol {
+	list-style: none;
+}
+
+.inner {
+	.hidden {
+		position: absolute;
+		top: -9999;
+		opacity: 0;
+	}
+}
+
+.wrap::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+fieldset {
+	border: none;
+}
+
+table {
+	border-collapse: collapse;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLERY</title>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://kit.fontawesome.com/ed17b3b742.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+    <script defer src="js/flickr.js"></script>
+</head>
+
+<body>
+    <header id="header_sub">
+        <div class="inner">
+            <h1 class="header_sub_title">
+                <a href="index.html">DCODELAB</a>
+            </h1>
+            <!-- Web Menu -->
+            <nav class="header_sub_nav">
+                <ul id="gnb">
+                    <li><a href="department.html">DEPARTMENT</a></li>
+                    <li><a href="youtube.html">YOUTUBE</a></li>
+                    <li><a href="community.html">COMMUNITY</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="location.html">LOCATION</a></li>
+                </ul>
+
+                <ul class="header_sub_util">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile Menu -->
+            <a href="#" class="btnCall">
+                <span>메뉴호출</span>
+            </a>
+            <nav class="header_m_nav">
+                <h1>
+                    <a href="#">DECODELAB</a>
+                    <span>UI/UX DEVELOPMENT INSTITUTE</span>
+                </h1>
+                <ul id="gnbMo">
+                    <li><a href="department.html">DEPARTMENT</a></li>
+                    <li><a href="youtube.html">YOUTUBE</a></li>
+                    <li><a href="community.html">COMMUNITY</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="location.html">LOCATION</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="content gallery">
+        <div class="sub_visual"></div>
+        <div class="inner">
+            <h1>GALLERY<span>사진</span></h1>
+            <div id="gallery">
+                <section id="searchBox">
+                    <input type="text" id="search" placeholder="검색어 입력">
+                    <button class="btnSearch">Search</button>
+                </section>
+                <article class="wrap">
+                    <img src="img/loading.gif" class="loading">
+                    <ul class="list">
+                        <!-- <li class="item">
+                            <div>
+                                <a href="큰이미지주소">
+                                    <img src="썸네일" alt="">
+                                </a>
+                                <p>이미지 제목</p>
+                            </div>
+                        </li> -->
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+    <footer id="footer_sub">
+        <div class="inner">
+            <h1 class="footer_sub_title">DCODELAB</h1>
+            <ul class="footer_sub_nav">
+                <li class="footer_sub_nav-btn">
+                    <a href="#">Policy</a>
+                </li>
+                <li class="footer_sub_nav-btn">
+                    <a href="#">Terms</a>
+                </li>
+                <li class="footer_sub_nav-btn">
+                    <a href="#">Customar</a>
+                </li>
+                <li class="footer_sub_nav-btn">
+                    <a href="#">Contact us</a>
+                </li>
+            </ul>
+            <address>
+                Address DCODELAB 60 Sajk-ro 8-gil, Jognro-gu Seoul, Republic of Kore(Posta Code 03172)
+                <br />
+                TEL : +02 2 2100 2114 Fax +82 2 2100 7999
+            </address>
+
+            <p>Copyright &copy; 2021 DCODELAB ALL Right reserved.</p>
+
+        </div>
+    </footer>
+</body>
+
+</html>

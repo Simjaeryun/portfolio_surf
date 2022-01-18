@@ -1,0 +1,123 @@
+.department {
+	.sub_visual {
+		background: url(../img/brand4.jpg) no-repeat center/cover;
+	}
+
+	.division {
+		width: 100%;
+		height: 600px;
+		background: url(../img/bgDIvision.jpg) no-repeat center/contain;
+
+		.div_tree {
+			position: absolute;
+			top: -9999px;
+			opacity: 0;
+			transition: opacity 1s;
+
+			li {
+				span {
+					display: block;
+					width: 40%;
+					height: 50px;
+					background: #111;
+					font: bold 13px/50px "arial";
+					color: #fff;
+					text-align: center;
+					border-radius: 25px;
+					margin-bottom: 20px;
+					position: relative;
+
+					&::after {
+						content: "";
+						display: block;
+						width: 1px;
+						height: calc((50px + 20px) * 17 - (50px / 2));
+						background: #aaa;
+						position: absolute;
+						top: 50px;
+						left: 50px;
+					}
+				}
+
+				//2depth
+				ul li {
+					span {
+						background: #666;
+						transform: translateX(70px);
+
+						&::before {
+							content: "";
+							display: block;
+							width: 20px;
+							height: 1px;
+							background: #aaa;
+							position: absolute;
+							top: 50%;
+							left: -20px;
+						}
+					}
+
+					//2depth 첫번째 li
+					&:nth-of-type(1) span::after {
+						display: none;
+					}
+					&:nth-of-type(2) span::after {
+						display: none;
+					}
+					&:nth-of-type(3) span::after {
+						height: calc((50px + 20px) * 2 - (50px / 2));
+					}
+					&:nth-of-type(4) span::after {
+						height: calc((50px + 20px) * 3 - (50px / 2));
+					}
+					&:nth-of-type(5) span::after {
+						height: calc(70px * 2 - 25px);
+					}
+					&:nth-of-type(6) span::after {
+						height: calc(70px * 3 - 25px);
+					}
+					&:nth-of-type(7) span::after {
+						height: calc(70px * 2 - 25px);
+					}
+
+					//3depth
+					ul li {
+						span {
+							background: #999;
+							transform: translateX(140px);
+
+							&::after {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*tablet ------------------------------*/
+@media screen and (max-width: $tabletSize) {
+	.department {
+		.division {
+			height: 60vw;
+		}
+	}
+}
+
+/*mobile ------------------------------*/
+@media screen and (max-width: $mobileSize) {
+	.department {
+		.division {
+			background: none;
+			height: auto;
+
+			.div_tree {
+				position: relative;
+				top: 0;
+				opacity: 1;
+			}
+		}
+	}
+}

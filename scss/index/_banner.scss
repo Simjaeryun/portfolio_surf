@@ -1,0 +1,21 @@
+#banner {
+	width: 100%;
+	padding: 150px 0;
+	background: url("../../img/banner.jpg") no-repeat center/cover fixed;
+	position: relative;
+	.inner {
+		width: 1180px;
+		text-align: center;
+		margin: 0 auto;
+		.banner_title {
+			font: bold 30px/1 "arial";
+			color: #fff;
+			margin-bottom: 30px;
+		}
+		.banner_info {
+			font: 14px/1 "arial";
+			color: #fff;
+			text-align: center;
+		}
+	}
+}

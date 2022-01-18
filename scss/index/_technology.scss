@@ -1,0 +1,90 @@
+#technology {
+	z-index: 10;
+	position: absolute;
+	top: 200vh;
+	figure {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+		.inner {
+			width: 1180px;
+			height: 100%;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+			position: relative;
+			padding: 60px;
+			.wrap {
+				width: 100%;
+				height: 65%;
+				display: flex;
+				justify-content: flex-start;
+				position: relative;
+				.tec_column_txt {
+					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font-size: 12px;
+					font-family: "Noto Sans", sans-serif;
+					letter-spacing: 5px;
+					span {
+						writing-mode: vertical-lr;
+						text-align: center;
+					}
+				}
+				video {
+					width: 80%;
+					height: 100%;
+					object-fit: cover;
+					margin-left: 20px;
+					filter: grayscale(1);
+				}
+				.tec_txt {
+					background: #fff;
+					position: absolute;
+					width: 350px;
+					height: 400px;
+					top: 50%;
+					transform: translateY(-50%);
+					right: 20px;
+					bottom: 250px;
+					padding: 30px;
+					text-align: center;
+					box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+					.tec_title {
+						width: 100%;
+
+						img {
+							width: 150px;
+							height: 100px;
+							object-fit: cover;
+						}
+					}
+					.tec_detail {
+						margin-top: 20px;
+						.tec_detail-title {
+							font: bold 16px/1 "arial";
+							margin-bottom: 15px;
+						}
+						.tec_detail-text {
+							font: normal 16px/25px "arial";
+
+							color: #777;
+						}
+					}
+					.tec_btn {
+						margin-top: 20px;
+						width: 220px;
+						padding: 10px;
+						background: none;
+						border: 3px solid rgb(64, 197, 250);
+						font: bold 14px/1 "arial";
+						letter-spacing: 4px;
+					}
+				}
+			}
+		}
+	}
+}

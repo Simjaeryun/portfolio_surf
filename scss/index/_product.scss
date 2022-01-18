@@ -1,16 +1,21 @@
 #product {
-	background-image: linear-gradient(
-		to left top,
-		#dddddd,
-		#e5e5e5,
-		#eeeeee,
-		#f6f6f6,
-		#ffffff
-	);
 	height: 200vh;
 	position: relative;
 	top: -50vh;
-	padding-top: 50vh;
+	.container {
+		padding-top: 50vh;
+		width: 1180px;
+		height: 100%;
+		margin: 0 auto;
+		background-image: linear-gradient(
+			to left top,
+			#dddddd,
+			#e5e5e5,
+			#eeeeee,
+			#f6f6f6,
+			#ffffff
+		);
+	}
 	.inner {
 		width: 1180px;
 		height: 100vh;
@@ -87,6 +92,19 @@
 				.product_detail-btn {
 					border: 3px solid rgb(64, 197, 250);
 					padding: 20px;
+				}
+			}
+			.product_pagination_box {
+				color: #888;
+				position: absolute;
+				bottom: 150px;
+				right: 50px;
+				i {
+					font-size: 20px;
+					cursor: pointer;
+				}
+				span {
+					margin: 0px 20px;
 				}
 			}
 		}

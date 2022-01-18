@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Frijole&family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -82,8 +82,8 @@ table {
 
 #visual {
   padding-top: 120px;
-  z-index: 10;
   position: relative;
+  z-index: 2;
 }
 #visual figure {
   width: 100%;
@@ -92,7 +92,7 @@ table {
   overflow: hidden;
 }
 #visual figure .inner {
-  padding-top: 30px;
+  padding: 60px;
   width: 1180px;
   height: 100%;
   margin: 0 auto;
@@ -102,7 +102,7 @@ table {
 }
 #visual figure .inner .visual_txt {
   position: absolute;
-  left: 40px;
+  left: 81px;
   bottom: 250px;
 }
 #visual figure .inner .visual_txt .visual_title {
@@ -132,16 +132,24 @@ table {
   justify-content: center;
 }
 #visual figure .inner .visual_column_txt span {
+  font-size: 12px;
+  font-family: "Noto Sans", sans-serif;
+  letter-spacing: 5px;
   writing-mode: vertical-lr;
   text-align: center;
 }
 
 #product {
-  background-image: linear-gradient(to left top, #dddddd, #e5e5e5, #eeeeee, #f6f6f6, #ffffff);
   height: 200vh;
   position: relative;
   top: -50vh;
+}
+#product .container {
   padding-top: 50vh;
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+  background-image: linear-gradient(to left top, #dddddd, #e5e5e5, #eeeeee, #f6f6f6, #ffffff);
 }
 #product .inner {
   width: 1180px;
@@ -220,108 +228,190 @@ table {
   border: 3px solid #40c5fa;
   padding: 20px;
 }
+#product .inner .wrap .product_pagination_box {
+  color: #888;
+  position: absolute;
+  bottom: 150px;
+  right: 50px;
+}
+#product .inner .wrap .product_pagination_box i {
+  font-size: 20px;
+  cursor: pointer;
+}
+#product .inner .wrap .product_pagination_box span {
+  margin: 0px 20px;
+}
 
-#brand {
-  width: 100%;
-  padding: 200px 0px;
-  position: relative;
-  background: #eee;
+#technology {
+  z-index: 10;
+  position: absolute;
+  top: 200vh;
 }
-#brand .inner {
-  width: 1180px;
-  margin: 0 auto;
-  position: relative;
-}
-#brand .inner h1.brand_title {
-  font: bold 24px/1 "arial";
-  color: #555;
-  text-align: center;
-  margin-bottom: 50px;
-}
-#brand .inner .wrap {
-  width: 100%;
-}
-#brand .inner .wrap article.brand_content:nth-of-type(1) {
-  width: 380px;
-  height: 620px;
-  background: #444;
-  float: left;
-  margin-right: 20px;
-  padding: 170px 50px 0px;
-  text-align: center;
-  font-size: 100px;
-  color: #fff;
-  margin-bottom: 20px;
-}
-#brand .inner .wrap article.brand_content:nth-of-type(1) h2 {
-  font: bold 20px/1 "arial";
-  color: #fff;
-  margin-bottom: 30px;
-}
-#brand .inner .wrap article.brand_content:nth-of-type(1) p {
-  font: 14px/1.3 "arial";
-  color: #999;
-  margin-bottom: 30px;
-}
-#brand .inner .wrap article.brand_content:nth-of-type(1) a {
-  display: block;
-  width: 150px;
-  height: 30px;
-  font: 11px/30px arial;
-  color: #ddd;
-  border: 1px solid #bbb;
-  text-align: center;
-  margin: 0 auto;
-}
-#brand .inner .wrap article.brand_content:nth-of-type(2) img,
-#brand .inner .wrap article.brand_content:nth-of-type(3) img,
-#brand .inner .wrap article.brand_content:nth-of-type(4) img {
+#technology figure {
   width: 100%;
   height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#technology figure .inner {
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 60px;
+}
+#technology figure .inner .wrap {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+#technology figure .inner .wrap .tec_column_txt {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-family: "Noto Sans", sans-serif;
+  letter-spacing: 5px;
+}
+#technology figure .inner .wrap .tec_column_txt span {
+  writing-mode: vertical-lr;
+  text-align: center;
+}
+#technology figure .inner .wrap video {
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  margin-left: 20px;
+  filter: grayscale(1);
+}
+#technology figure .inner .wrap .tec_txt {
+  background: #fff;
+  position: absolute;
+  width: 350px;
+  height: 400px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  bottom: 250px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+#technology figure .inner .wrap .tec_txt .tec_title {
+  width: 100%;
+}
+#technology figure .inner .wrap .tec_txt .tec_title img {
+  width: 150px;
+  height: 100px;
   object-fit: cover;
 }
-#brand .inner .wrap article.brand_content:nth-of-type(2) {
-  width: 380px;
-  height: 300px;
-  background: url("../../img/brand1.jpg");
-  float: left;
-  margin-right: 20px;
-}
-#brand .inner .wrap article.brand_content:nth-of-type(3) {
-  width: 380px;
-  height: 300px;
-  background: chocolate;
-  float: left;
-}
-#brand .inner .wrap article.brand_content:nth-of-type(4) {
+#technology figure .inner .wrap .tec_txt .tec_detail {
   margin-top: 20px;
-  width: 780px;
-  height: 300px;
-  background: chocolate;
-  float: left;
-  position: relative;
+}
+#technology figure .inner .wrap .tec_txt .tec_detail .tec_detail-title {
+  font: bold 16px/1 "arial";
+  margin-bottom: 15px;
+}
+#technology figure .inner .wrap .tec_txt .tec_detail .tec_detail-text {
+  font: normal 16px/25px "arial";
+  color: #777;
+}
+#technology figure .inner .wrap .tec_txt .tec_btn {
+  margin-top: 20px;
+  width: 220px;
+  padding: 10px;
+  background: none;
+  border: 3px solid #40c5fa;
+  font: bold 14px/1 "arial";
+  letter-spacing: 4px;
 }
 
-#banner {
+#info {
+  z-index: 10;
+  position: relative;
+  overflow: hidden;
+}
+#info figure {
   width: 100%;
-  padding: 150px 0;
-  background: url("../../img/banner.jpg") no-repeat center/cover fixed;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#info figure .inner {
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 60px;
+}
+#info figure .inner .wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   position: relative;
 }
-#banner .inner {
-  width: 1180px;
-  text-align: center;
-  margin: 0 auto;
+#info figure .inner .wrap .info_txt {
+  padding-right: 35px;
+  width: 40%;
+  margin-right: 40px;
 }
-#banner .inner .banner_title {
-  font: bold 30px/1 "arial";
-  color: #fff;
-  margin-bottom: 30px;
+#info figure .inner .wrap .info_txt .info_title {
+  font: bold 70px/60px "arial";
 }
-#banner .inner .banner_info {
-  font: 14px/1 "arial";
-  color: #fff;
+#info figure .inner .wrap .info_txt .info_detail {
+  margin-top: 20px;
+}
+#info figure .inner .wrap .info_txt .info_detail .info_detail-text {
+  font: bold 16px/30px "arial";
+  color: #999;
+}
+#info figure .inner .wrap .info_txt .info_btn {
+  margin-top: 20px;
+  width: 220px;
+  padding: 10px;
+  background: none;
+  border: 3px solid #40c5fa;
+  font: bold 14px/1 "arial";
+  letter-spacing: 4px;
+}
+#info figure .inner .wrap .info_img_box {
+  width: 55%;
+}
+#info figure .inner .wrap .info_img_box img {
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+#info figure .inner .wrap .info_column_txt {
+  width: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-family: "Noto Sans", sans-serif;
+  letter-spacing: 5px;
+}
+#info figure .inner .wrap .info_column_txt span {
+  writing-mode: vertical-lr;
   text-align: center;
+}
+#info .info_background {
+  position: absolute;
+  transform: rotate(180deg);
+  bottom: -100px;
+  width: 100%;
+  height: 500px;
+  background: url("../../img/wave.png") no-repeat center/cover;
+  opacity: 0.5;
 }
 
 #comments {

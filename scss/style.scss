@@ -1,6 +1,6 @@
 @charset "UTF-8";
 //font
-@import url("https://fonts.googleapis.com/css2?family=Frijole&family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
 
 @import "variable.scss";
 @import "reset.scss";
@@ -9,8 +9,8 @@
 @import "./index/header.scss";
 @import "./index/visual.scss";
 @import "./index/product.scss";
-@import "./index/brand.scss";
-@import "./index/banner.scss";
+@import "./index/technology.scss";
+@import "./index/info.scss";
 @import "./index/comments.scss";
 @import "./index/footer.scss";
 

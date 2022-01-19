@@ -39,7 +39,7 @@ table {
 
 #header {
   width: 100%;
-  z-index: 2;
+  z-index: 10;
   position: absolute;
   top: 0;
   left: 0;
@@ -70,17 +70,19 @@ table {
 }
 #header .inner .header_nav #gnb li a {
   color: #000;
-  font-weight: bold;
+  font-family: "Noto Sans", sans-serif;
 }
 #header .inner .header_nav .header_nav-status a {
   display: block;
   border: 3px solid aqua;
   padding: 5px 20px;
   color: #000;
-  font-weight: bold;
+  font-family: "Noto Sans", sans-serif;
 }
 
 #visual {
+  width: 100%;
+  height: 100vh;
   padding-top: 120px;
   position: relative;
   z-index: 2;
@@ -113,17 +115,22 @@ table {
   font: bold 20px/1 "arial";
 }
 #visual figure .inner .visual_txt .visual_btn {
+  cursor: pointer;
   margin-top: 20px;
   width: 220px;
   padding: 10px;
   border: none;
   background: #40c5fa;
+  box-shadow: 5px 5px 10px rgba(64, 197, 250, 0.5);
+  color: #fff;
+  letter-spacing: 1px;
 }
 #visual figure .inner video {
   width: 80%;
   height: 80%;
   object-fit: cover;
   margin-right: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 #visual figure .inner .visual_column_txt {
   height: 80%;
@@ -140,6 +147,7 @@ table {
 }
 
 #product {
+  width: 100%;
   height: 200vh;
   position: relative;
   top: -50vh;
@@ -165,6 +173,7 @@ table {
   height: 100%;
   position: relative;
   align-items: center;
+  padding-right: 50px;
 }
 #product .inner .wrap .product_logo_box {
   width: 40%;
@@ -181,6 +190,9 @@ table {
   width: 50%;
   height: 20%;
 }
+#product .inner .wrap .product_logo_box .product_logo.on, #product .inner .wrap .product_logo_box .product_logo:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
 #product .inner .wrap .product_logo_box .product_logo img {
   width: 50%;
   object-fit: cover;
@@ -194,25 +206,25 @@ table {
 #product .inner .wrap .product_img_box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 #product .inner .wrap .product_detail_box {
-  position: absolute;
-  right: 40px;
-  top: 250px;
   width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 #product .inner .wrap .product_detail_box .product_detail_title {
   width: 300px;
-  height: 160px;
+  height: 200px;
   margin-bottom: 20px;
   position: relative;
 }
 #product .inner .wrap .product_detail_box .product_detail_title img {
-  position: absolute;
   width: 100%;
-  top: -100px;
-  left: -60px;
+  height: 100%;
+  object-fit: contain;
 }
 #product .inner .wrap .product_detail_box .product_detail-name {
   font: bold 18px "arial";
@@ -232,7 +244,7 @@ table {
   color: #888;
   position: absolute;
   bottom: 150px;
-  right: 50px;
+  right: 30px;
 }
 #product .inner .wrap .product_pagination_box i {
   font-size: 20px;
@@ -243,6 +255,8 @@ table {
 }
 
 #technology {
+  width: 100%;
+  height: 100vh;
   z-index: 10;
   position: absolute;
   top: 200vh;
@@ -277,6 +291,7 @@ table {
   font-size: 12px;
   font-family: "Noto Sans", sans-serif;
   letter-spacing: 5px;
+  transform: rotate(180deg);
 }
 #technology figure .inner .wrap .tec_column_txt span {
   writing-mode: vertical-lr;
@@ -332,6 +347,8 @@ table {
 }
 
 #info {
+  width: 100%;
+  height: 100vh;
   z-index: 10;
   position: relative;
   overflow: hidden;
@@ -412,54 +429,6 @@ table {
   height: 500px;
   background: url("../img/wave.png") no-repeat center/cover;
   opacity: 0.5;
-}
-
-#comments {
-  width: 100%;
-  padding: 150px;
-}
-#comments h1.comments_title {
-  font: bold 24px/1 "arial";
-  color: #555;
-  text-align: center;
-  margin-bottom: 50px;
-}
-#comments .inner {
-  width: 1180px;
-  margin: 0 auto;
-  position: relative;
-}
-#comments .inner .comments_list {
-  width: 100%;
-}
-#comments .inner .comments_list .comments_list_column {
-  position: relative;
-  width: 100%;
-  border: 1px solid #ddd;
-  padding: 15px 20px;
-  margin-bottom: 20px;
-}
-#comments .inner .comments_list .comments_list_column a {
-  font: 18px/1 "arial";
-  color: #555;
-  float: left;
-}
-#comments .inner .comments_list .comments_list_column span {
-  float: right;
-  color: #888;
-  font: 14px/1 "arial";
-}
-#comments .inner .comments_list .comments_list_column:hover {
-  background: #555;
-}
-#comments .inner .comments_list .comments_list_column:hover a,
-#comments .inner .comments_list .comments_list_column:hover span {
-  color: #fff;
-}
-#comments .inner .comments_list .comments_list_column::after {
-  content: "";
-  display: block;
-  clear: both;
 }
 
 #footer {
@@ -1541,11 +1510,6 @@ figure.pop .btnClose {
   color: #fff;
 }
 
-section {
-  width: 100%;
-  height: 100vh;
-}
-
 /* tablet 구간 */
 @media screen and (max-width: 1170px) {
   #header .inner {
@@ -1634,19 +1598,6 @@ section {
     width: 100%;
   }
 
-  #comments {
-    padding: 100px 30px;
-  }
-  #comments .inner {
-    width: 100%;
-  }
-  #comments .inner .comments_list .comments_list_column a {
-    font: 16px/1 "arial";
-  }
-  #comments .inner .comments_list .comments_list_column span {
-    font: 12px/1 "arial";
-  }
-
   #footer {
     padding: 80px 30px;
   }
@@ -1683,13 +1634,6 @@ section {
   }
   #banner .inner {
     width: 100%;
-  }
-
-  #comments {
-    padding: 100px 30px;
-  }
-  #comments .inner .comments_list .comments_list_column a {
-    margin-bottom: 15px;
   }
 
   #footer {

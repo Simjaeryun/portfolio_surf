@@ -1,6 +1,6 @@
 #header {
 	width: 100%;
-	z-index: 2;
+	z-index: 10;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -28,7 +28,7 @@
 				li {
 					a {
 						color: #000;
-						font-weight: bold;
+						font-family: "Noto Sans", sans-serif;
 					}
 				}
 			}
@@ -38,7 +38,7 @@
 					border: 3px solid aqua;
 					padding: 5px 20px;
 					color: #000;
-					font-weight: bold;
+					font-family: "Noto Sans", sans-serif;
 				}
 			}
 		}

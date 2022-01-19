@@ -1,4 +1,6 @@
 #technology {
+	width: 100%;
+	height: 100vh;
 	z-index: 10;
 	position: absolute;
 	top: 200vh;
@@ -29,6 +31,7 @@
 					font-size: 12px;
 					font-family: "Noto Sans", sans-serif;
 					letter-spacing: 5px;
+					transform: rotate(180deg);
 					span {
 						writing-mode: vertical-lr;
 						text-align: center;

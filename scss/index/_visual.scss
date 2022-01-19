@@ -1,4 +1,6 @@
 #visual {
+	width: 100%;
+	height: 100vh;
 	padding-top: 120px;
 	position: relative;
 	z-index: 2;
@@ -28,11 +30,15 @@
 					font: bold 20px/1 "arial";
 				}
 				.visual_btn {
+					cursor: pointer;
 					margin-top: 20px;
 					width: 220px;
 					padding: 10px;
 					border: none;
 					background: rgb(64, 197, 250);
+					box-shadow: 5px 5px 10px rgba(64, 197, 250, 0.5);
+					color: #fff;
+					letter-spacing: 1px;
 				}
 			}
 			video {
@@ -40,6 +46,7 @@
 				height: 80%;
 				object-fit: cover;
 				margin-right: 20px;
+				box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 			}
 			.visual_column_txt {
 				height: 80%;

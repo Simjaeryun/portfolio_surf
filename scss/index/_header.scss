@@ -4,13 +4,15 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+
 	.inner {
 		margin: auto;
 		width: 1180px;
 		display: flex;
 		align-items: center;
 		.header_title {
-			width: 120px;
+			width: 150px;
+			margin-right: 65px;
 			img {
 				width: 100%;
 			}
@@ -28,7 +30,8 @@
 				li {
 					a {
 						color: #000;
-						font-family: "Noto Sans", sans-serif;
+						font-family: "Lalezar", cursive;
+						font-size: 20px;
 					}
 				}
 			}

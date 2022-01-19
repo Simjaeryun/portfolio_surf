@@ -24,6 +24,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		padding: 0px 60px;
 		.wrap {
 			display: flex;
 			width: 100%;
@@ -71,6 +72,7 @@
 				flex-wrap: wrap;
 				align-items: center;
 				justify-content: center;
+				padding: 0px 15px;
 				.product_detail_title {
 					width: 300px;
 					height: 200px;
@@ -83,7 +85,8 @@
 					}
 				}
 				.product_detail-name {
-					font: bold 18px "arial";
+					font-family: "Anton", sans-serif;
+					font-size: 24px;
 					color: rgb(64, 197, 250);
 					margin-bottom: 20px;
 				}
@@ -95,6 +98,7 @@
 				.product_detail-btn {
 					border: 3px solid rgb(64, 197, 250);
 					padding: 20px;
+					background: none;
 				}
 			}
 			.product_pagination_box {
@@ -102,12 +106,16 @@
 				position: absolute;
 				bottom: 150px;
 				right: 30px;
-				i {
-					font-size: 20px;
-					cursor: pointer;
+				a {
+					i {
+						color: #888;
+						font-size: 20px;
+						cursor: pointer;
+					}
 				}
+
 				span {
-					margin: 0px 20px;
+					margin: 0px 10px;
 				}
 			}
 		}

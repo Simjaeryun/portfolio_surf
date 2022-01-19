@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Lalezar&family=Noto+Sans:wght@700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -51,7 +51,8 @@ table {
   align-items: center;
 }
 #header .inner .header_title {
-  width: 120px;
+  width: 150px;
+  margin-right: 65px;
 }
 #header .inner .header_title img {
   width: 100%;
@@ -70,7 +71,8 @@ table {
 }
 #header .inner .header_nav #gnb li a {
   color: #000;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Lalezar", cursive;
+  font-size: 20px;
 }
 #header .inner .header_nav .header_nav-status a {
   display: block;
@@ -83,7 +85,7 @@ table {
 #visual {
   width: 100%;
   height: 100vh;
-  padding-top: 120px;
+  padding-top: 140px;
   position: relative;
   z-index: 2;
 }
@@ -94,25 +96,29 @@ table {
   overflow: hidden;
 }
 #visual figure .inner {
-  padding: 60px;
   width: 1180px;
   height: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: flex-end;
   position: relative;
+  padding: 0px 60px;
 }
 #visual figure .inner .visual_txt {
   position: absolute;
-  left: 81px;
+  left: 100px;
   bottom: 250px;
+  z-index: 2;
+  font-family: "Lalezar", cursive;
 }
 #visual figure .inner .visual_txt .visual_title {
-  font: bold 100px/1 "arial";
+  font-size: 100px;
+  line-height: 80px;
+  letter-spacing: 2px;
 }
 #visual figure .inner .visual_txt .visual_detail {
   margin-top: 20px;
-  font: bold 20px/1 "arial";
+  font-size: 20px;
 }
 #visual figure .inner .visual_txt .visual_btn {
   cursor: pointer;
@@ -166,6 +172,7 @@ table {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0px 60px;
 }
 #product .inner .wrap {
   display: flex;
@@ -214,6 +221,7 @@ table {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding: 0px 15px;
 }
 #product .inner .wrap .product_detail_box .product_detail_title {
   width: 300px;
@@ -227,7 +235,8 @@ table {
   object-fit: contain;
 }
 #product .inner .wrap .product_detail_box .product_detail-name {
-  font: bold 18px "arial";
+  font-family: "Anton", sans-serif;
+  font-size: 24px;
   color: #40c5fa;
   margin-bottom: 20px;
 }
@@ -239,6 +248,7 @@ table {
 #product .inner .wrap .product_detail_box .product_detail-btn {
   border: 3px solid #40c5fa;
   padding: 20px;
+  background: none;
 }
 #product .inner .wrap .product_pagination_box {
   color: #888;
@@ -246,12 +256,13 @@ table {
   bottom: 150px;
   right: 30px;
 }
-#product .inner .wrap .product_pagination_box i {
+#product .inner .wrap .product_pagination_box a i {
+  color: #888;
   font-size: 20px;
   cursor: pointer;
 }
 #product .inner .wrap .product_pagination_box span {
-  margin: 0px 20px;
+  margin: 0px 10px;
 }
 
 #technology {

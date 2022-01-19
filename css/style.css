@@ -45,6 +45,7 @@ table {
 #header .inner {
   margin: auto;
   width: 1180px;
+  height: 100%;
   display: flex;
   align-items: center;
 }
@@ -315,6 +316,7 @@ table {
   object-fit: cover;
   margin-left: 40px;
   filter: grayscale(1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 #technology figure .inner .wrap .tec_txt {
   background: #fff;
@@ -324,7 +326,6 @@ table {
   top: 50%;
   transform: translateY(-50%);
   right: 0px;
-  bottom: 250px;
   padding: 30px;
   text-align: center;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
@@ -1526,5 +1527,257 @@ figure.pop .btnClose {
 }
 
 /* tablet 구간 */
+@media screen and (max-width: 1170px) {
+  #header {
+    width: 100%;
+    height: 10vh;
+  }
+  #header .inner {
+    width: 100%;
+  }
+  #header .inner .header_title {
+    display: none;
+  }
+  #header .inner .header_nav #gnb {
+    margin-left: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  #header .inner .header_nav #gnb li a {
+    color: #000;
+    font-family: "Lalezar", cursive;
+    font-size: 20px;
+  }
+  #header .inner .header_nav #gnb li a:hover {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  }
+  #header .inner .header_status {
+    display: none;
+  }
+
+  #visual {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    z-index: 2;
+  }
+  #visual figure {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  #visual figure .inner {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #visual figure .inner .visual_txt {
+    text-align: center;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    font-family: "Lalezar", cursive;
+  }
+  #visual figure .inner .visual_txt .visual_title {
+    font-size: 100px;
+  }
+  #visual figure .inner .visual_txt .visual_detail {
+    display: none;
+  }
+  #visual figure .inner .visual_txt .visual_btn {
+    display: none;
+  }
+  #visual figure .inner video {
+    height: 50%;
+    margin-right: 0px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+  #visual figure .inner .visual_column_txt {
+    display: none;
+  }
+
+  #product {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 0;
+  }
+  #product .container {
+    padding: 0px;
+    width: 100%;
+    background: none;
+  }
+  #product .inner {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+  }
+  #product .inner .wrap {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-right: 0px;
+  }
+  #product .inner .wrap .product_logo_box {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  #product .inner .wrap .product_logo_box .product_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+  }
+  #product .inner .wrap .product_logo_box .product_logo:nth-of-type(n + 5) {
+    display: none;
+  }
+  #product .inner .wrap .product_logo_box .product_logo img {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(1);
+    cursor: pointer;
+  }
+  #product .inner .wrap .product_img_box {
+    width: 100%;
+    height: 50%;
+  }
+  #product .inner .wrap .product_img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  #product .inner .wrap .product_detail_box {
+    display: none;
+  }
+  #product .inner .wrap .product_pagination_box {
+    display: none;
+  }
+
+  #technology {
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    position: relative;
+    top: 0;
+  }
+  #technology figure .inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0px;
+  }
+  #technology figure .inner .wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #technology figure .inner .wrap .tec_column_txt {
+    display: none;
+  }
+  #technology figure .inner .wrap video {
+    width: 90%;
+    height: 50%;
+    object-fit: cover;
+    margin-left: 0px;
+    filter: grayscale(1);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+  #technology figure .inner .wrap .tec_txt {
+    padding: 0px;
+    background: #fff;
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    box-shadow: none;
+    margin-top: 50px;
+  }
+
+  #info figure .inner {
+    width: 100%;
+    padding: 0px;
+  }
+  #info figure .inner .wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #info figure .inner .wrap .info_img_box {
+    width: 90%;
+  }
+  #info figure .inner .wrap .info_img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+  #info figure .inner .wrap .info_txt {
+    padding-right: 0px;
+    padding: 30px;
+    width: 100%;
+    margin-right: 0px;
+    text-align: center;
+  }
+  #info figure .inner .wrap .info_txt .info_title {
+    font: bold 60px/60px "arial";
+  }
+  #info figure .inner .wrap .info_txt .info_detail {
+    margin-top: 20px;
+  }
+  #info figure .inner .wrap .info_txt .info_detail .info_detail-text {
+    font: bold 15px/30px "Poppins";
+    color: #999;
+  }
+  #info figure .inner .wrap .info_txt .info_btn {
+    margin-top: 20px;
+    width: 220px;
+    padding: 10px;
+    background: none;
+    border: 3px solid #40c5fa;
+    font: bold 14px/1 "Poppins";
+    letter-spacing: 4px;
+  }
+  #info figure .inner .wrap .info_column_txt {
+    display: none;
+  }
+  #info .info_background {
+    position: absolute;
+    transform: rotate(180deg);
+    bottom: -50px;
+    width: 100%;
+    height: 500px;
+    background: url("../img/wave.png") no-repeat center/cover;
+    opacity: 0.5;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

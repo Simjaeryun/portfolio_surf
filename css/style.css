@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Lalezar&family=Noto+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Lalezar&family=Noto+Sans:wght@700&family=Poppins:wght@300&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -39,10 +39,8 @@ table {
 
 #header {
   width: 100%;
+  height: 15vh;
   z-index: 10;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 #header .inner {
   margin: auto;
@@ -74,7 +72,10 @@ table {
   font-family: "Lalezar", cursive;
   font-size: 20px;
 }
-#header .inner .header_nav .header_nav-status a {
+#header .inner .header_nav #gnb li a:hover {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+#header .inner .header_status a {
   display: block;
   border: 3px solid aqua;
   padding: 5px 20px;
@@ -84,8 +85,7 @@ table {
 
 #visual {
   width: 100%;
-  height: 100vh;
-  padding-top: 140px;
+  height: 85vh;
   position: relative;
   z-index: 2;
 }
@@ -249,6 +249,7 @@ table {
   border: 3px solid #40c5fa;
   padding: 20px;
   background: none;
+  cursor: pointer;
 }
 #product .inner .wrap .product_pagination_box {
   color: #888;
@@ -289,7 +290,7 @@ table {
 }
 #technology figure .inner .wrap {
   width: 100%;
-  height: 65%;
+  height: 80%;
   display: flex;
   justify-content: flex-start;
   position: relative;
@@ -312,7 +313,7 @@ table {
   width: 80%;
   height: 100%;
   object-fit: cover;
-  margin-left: 20px;
+  margin-left: 40px;
   filter: grayscale(1);
 }
 #technology figure .inner .wrap .tec_txt {
@@ -322,7 +323,7 @@ table {
   height: 400px;
   top: 50%;
   transform: translateY(-50%);
-  right: 20px;
+  right: 0px;
   bottom: 250px;
   padding: 30px;
   text-align: center;
@@ -340,11 +341,14 @@ table {
   margin-top: 20px;
 }
 #technology figure .inner .wrap .tec_txt .tec_detail .tec_detail-title {
-  font: bold 16px/1 "arial";
+  font-size: 20px;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 3px;
   margin-bottom: 15px;
 }
 #technology figure .inner .wrap .tec_txt .tec_detail .tec_detail-text {
-  font: normal 16px/25px "arial";
+  font: bold 15px/25px "Poppins";
+  letter-spacing: 1px;
   color: #777;
 }
 #technology figure .inner .wrap .tec_txt .tec_btn {
@@ -353,7 +357,7 @@ table {
   padding: 10px;
   background: none;
   border: 3px solid #40c5fa;
-  font: bold 14px/1 "arial";
+  font: bold 14px/1 "Poppins";
   letter-spacing: 4px;
 }
 
@@ -399,7 +403,7 @@ table {
   margin-top: 20px;
 }
 #info figure .inner .wrap .info_txt .info_detail .info_detail-text {
-  font: bold 16px/30px "arial";
+  font: bold 15px/30px "Poppins";
   color: #999;
 }
 #info figure .inner .wrap .info_txt .info_btn {
@@ -408,7 +412,7 @@ table {
   padding: 10px;
   background: none;
   border: 3px solid #40c5fa;
-  font: bold 14px/1 "arial";
+  font: bold 14px/1 "Poppins";
   letter-spacing: 4px;
 }
 #info figure .inner .wrap .info_img_box {
@@ -1522,144 +1526,5 @@ figure.pop .btnClose {
 }
 
 /* tablet 구간 */
-@media screen and (max-width: 1170px) {
-  #header .inner {
-    width: 100%;
-    height: 100px;
-  }
-  #header .inner h1.header_title {
-    left: 20px;
-  }
-  #header .inner .header_nav {
-    display: none;
-  }
-  #header .inner .btnCall {
-    display: block;
-  }
-  #header .inner .header_m_nav {
-    display: block;
-  }
-
-  #visual {
-    height: calc(100vh - 101px);
-    background: url(../img/visual1.jpg) no-repeat center/cover;
-  }
-  #visual video {
-    display: none;
-  }
-  #visual .inner {
-    width: 100%;
-    padding: 0px 30px;
-  }
-  #visual .inner h1 {
-    font: normal 14vmin/1 "arial";
-  }
-  #visual .inner a {
-    width: 100%;
-  }
-
-  #news {
-    width: 100%;
-    padding: 100px 30px;
-  }
-  #news .inner {
-    width: 100%;
-  }
-  #news .inner .wrap article.news_content {
-    width: 49%;
-    margin-right: 2%;
-    margin-bottom: 60px;
-  }
-  #news .inner .wrap article.news_content .news_content_pic {
-    height: 20vmax;
-  }
-  #news .inner .wrap article.news_content:nth-of-type(2) {
-    margin-right: 0;
-  }
-
-  #brand {
-    padding: 100px 30px;
-  }
-  #brand .inner {
-    width: 100%;
-  }
-  #brand .inner .wrap article.brand_content:nth-of-type(1) {
-    width: 49%;
-    margin-right: 2%;
-  }
-  #brand .inner .wrap article.brand_content:nth-of-type(1) a {
-    width: 100%;
-  }
-  #brand .inner .wrap article.brand_content:nth-of-type(2) {
-    width: 49%;
-    margin-right: 0px;
-    margin-bottom: 20px;
-  }
-  #brand .inner .wrap article.brand_content:nth-of-type(3) {
-    width: 49%;
-  }
-  #brand .inner .wrap article.brand_content:nth-of-type(4) {
-    width: 100%;
-  }
-
-  #banner {
-    padding: 150px 30px;
-  }
-  #banner .inner {
-    width: 100%;
-  }
-
-  #footer {
-    padding: 80px 30px;
-  }
-  #footer .inner {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 539px) {
-  #visual .inner h1 {
-    font: normal 12vmin/1 "arial";
-  }
-  #visual .inner .wrap article.news_content {
-    width: 100%;
-    margin-right: 0px;
-  }
-  #visual .inner .wrap article.news_content .news_content_pic {
-    height: 30vmax;
-  }
-
-  #brand .inner .wrap article.brand_content:nth-of-type(1) {
-    width: 100%;
-    height: 400px;
-    padding: 50px;
-    margin-bottom: 20px;
-  }
-  #brand .inner .wrap article.brand_content:nth-of-type(2),
-#brand .inner .wrap article.brand_content:nth-of-type(3),
-#brand .inner .wrap article.brand_content:nth-of-type(4) {
-    width: 100%;
-  }
-
-  #banner {
-    padding: 100px 30px;
-  }
-  #banner .inner {
-    width: 100%;
-  }
-
-  #footer {
-    padding: 80px 30px;
-  }
-  #footer .inner h1.footer_title {
-    margin-bottom: 20px;
-  }
-  #footer .inner ul.footer_nav {
-    width: 100%;
-  }
-  #footer .inner ul.footer_nav .footer_nav-btn {
-    margin-left: 0px;
-    margin-right: 5px;
-  }
-}
 
 /*# sourceMappingURL=style.css.map */

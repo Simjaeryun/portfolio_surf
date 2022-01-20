@@ -107,7 +107,7 @@ table {
 }
 #visual figure .inner .visual_txt {
   position: absolute;
-  left: 100px;
+  left: 0px;
   bottom: 250px;
   z-index: 2;
   font-family: "Lalezar", cursive;
@@ -133,10 +133,11 @@ table {
   letter-spacing: 1px;
 }
 #visual figure .inner video {
-  width: 80%;
+  width: 90%;
   height: 80%;
   object-fit: cover;
-  margin-right: 20px;
+  margin-top: 20px;
+  margin-right: 10px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 #visual figure .inner .visual_column_txt {
@@ -161,10 +162,10 @@ table {
 }
 #product .container {
   padding-top: 50vh;
-  width: 1180px;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
-  background-image: linear-gradient(to left top, #dddddd, #e5e5e5, #eeeeee, #f6f6f6, #ffffff);
+  background-image: linear-gradient(to left top, #dddddd, #e5e5e5, #eeeeee, #fdfdfd, #ffffff);
 }
 #product .inner {
   width: 1180px;
@@ -173,7 +174,7 @@ table {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0px 60px;
+  padding: 0px;
 }
 #product .inner .wrap {
   display: flex;
@@ -287,13 +288,13 @@ table {
   display: flex;
   align-items: center;
   position: relative;
-  padding: 60px;
 }
 #technology figure .inner .wrap {
   width: 100%;
   height: 80%;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   position: relative;
 }
 #technology figure .inner .wrap .tec_column_txt {
@@ -312,9 +313,9 @@ table {
 }
 #technology figure .inner .wrap video {
   width: 80%;
-  height: 100%;
+  height: 80%;
   object-fit: cover;
-  margin-left: 40px;
+  margin-left: 10px;
   filter: grayscale(1);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
@@ -382,7 +383,6 @@ table {
   display: flex;
   align-items: center;
   position: relative;
-  padding: 60px;
 }
 #info figure .inner .wrap {
   width: 100%;
@@ -420,7 +420,7 @@ table {
   width: 55%;
 }
 #info figure .inner .wrap .info_img_box img {
-  width: 100%;
+  width: 90%;
   object-fit: cover;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
@@ -440,7 +440,7 @@ table {
 #info .info_background {
   position: absolute;
   transform: rotate(180deg);
-  bottom: -100px;
+  bottom: 0px;
   width: 100%;
   height: 500px;
   background: url("../img/wave.png") no-repeat center/cover;

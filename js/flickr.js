@@ -1,4 +1,5 @@
 const gallery = document.querySelector("#gallery")
+const galleryWrap = document.querySelector("#gallery .wrap")
 const galList = document.querySelector("#gallery .wrap .list");
 const key = "f7cfb698e2ac45b786af0b554ec7cd09";
 const base = "https://www.flickr.com/services/rest/?";
@@ -8,7 +9,7 @@ const per_page = 50;
 const format = "json";
 const btnSearch = document.querySelector(".btnSearch")
 const input = gallery.querySelector("#search")
-const url = `${base}method=${method1}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1`
+const url = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=wave&privacy_filter=1`;
 const body = document.querySelector("body")
 const loading = document.querySelector(".loading")
 callData(url);
@@ -69,22 +70,26 @@ function callData(url) {
 function createList(items) {
     //htmls 변수에 빈문자열 저장 
     let htmls = ""
+    const nextBtn = document.createElement("div");
+    const prevBtn = document.createElement("div");
+    nextBtn.classList.add("swiper-button-next");
+    prevBtn.classList.add("swiper-button-prev")
     items.map(data => {
         const imgSrc = `https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_m.jpg`;
 
         const imgSrcBig = `https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_b.jpg`;
 
         htmls += `
-        <li class="item">
-            <div>
+        <div class="item swiper-slide"> 
                 <a href="${imgSrcBig}">
                     <img src="${imgSrc}" alt="">
                 </a>
-            </div>
-        </li>
+        </div>
          `;
     })
     galList.innerHTML = htmls;
+    gallery.append(prevBtn);
+    gallery.append(nextBtn)
 }
 
 // 이미지 클릭시 popup창 생성
@@ -129,20 +134,29 @@ function galLoading() {
         el.onload = () => {
             count++;
             if (count + 1 == len) {
-                isoLayout()
+                swiper()
             }
         }
     }
 
 }
 
-function isoLayout() {
-    galList.classList.add("on")
+
+
+
+function swiper() {
+
     loading.classList.add("off")
-    new Isotope(".list", {
-        itemSelector: ".item",
-        columnWidth: ".item",
-        transitionDuration: "0.5s"
+    let swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        grid: {
+            rows: 2,
+        },
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
     });
 }
 

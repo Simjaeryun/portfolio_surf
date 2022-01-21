@@ -555,36 +555,6 @@ table {
   position: relative;
 }
 
-#footer_sub {
-  width: 100%;
-  height: 5vh;
-  background: #444;
-}
-#footer_sub .inner {
-  width: 1180px;
-  margin: 0 auto;
-  position: relative;
-}
-#footer_sub .inner h1.footer_sub_title {
-  font: bold 24px/1 "arial";
-  color: #666;
-}
-#footer_sub .inner ul.footer_sub_nav .footer_sub_nav-btn a {
-  font: bold 14px/1 "arial";
-  color: #666;
-}
-#footer_sub .inner address {
-  width: 100%;
-  font: 14px/1.3 "arial";
-  color: #777;
-  border-top: 1px solid #777;
-}
-#footer_sub .inner p {
-  font: 12px/1 "arial";
-  color: #777;
-  width: 100%;
-}
-
 .community .sub_visual {
   background: url("../img/visual3.jpg") no-repeat center/cover;
 }
@@ -887,7 +857,10 @@ table {
 }
 #gallery {
   width: 100%;
+  height: 100%;
   position: relative;
+  overflow: hidden;
+  padding: 60px;
 }
 #gallery #searchBox {
   display: flex;
@@ -915,78 +888,50 @@ table {
   font: bold 16px "arial";
 }
 #gallery .wrap {
-  width: 100%;
-  padding: 50px;
   position: relative;
+  width: 100%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
 }
 #gallery .wrap .loading {
   width: 100px;
   position: absolute;
-  top: 110%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  transition: 1s;
+  transform: translate(-50%, -50%);
 }
 #gallery .wrap .loading.off {
   opacity: 0;
 }
 #gallery .wrap .list {
   width: 100%;
-  opacity: 0;
+  height: 100%;
+  opacity: 1;
   transform: translateY(100px);
   transition: 1s;
 }
 #gallery .wrap .list.on {
-  opacity: 1;
+  opacity: 0;
   transform: translateY(0px);
 }
-#gallery .wrap .list::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-#gallery .wrap .list li {
-  float: left;
-  width: 25%;
-  padding: 10px;
-}
-#gallery .wrap .list li div {
+#gallery .wrap .list .item {
   width: 100%;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: calc((100% - 30px) / 2);
 }
-#gallery .wrap .list li div a {
+#gallery .wrap .list .item a {
   display: block;
   width: 100%;
   height: 100%;
 }
-#gallery .wrap .list li div a:hover > img {
-  transform: scale(1.05);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
-}
-#gallery .wrap .list li div a > img {
-  border-radius: 10px;
+#gallery .wrap .list .item a img {
   width: 100%;
   height: 100%;
-}
-#gallery .wrap .list li div p {
-  font: 12px/1.2 "arial";
-  color: #777;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-#gallery .wrap .list li div span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#gallery .wrap .list li div span img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 5px;
-}
-#gallery .wrap .list li div span strong {
-  font: 12px/1 "arial";
-  color: orange;
+  object-fit: cover;
 }
 #gallery aside {
   width: 100%;
@@ -998,6 +943,7 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 #gallery aside div img {
   width: 100%;
@@ -1011,21 +957,6 @@ table {
   cursor: pointer;
 }
 
-@media screen and (max-width: 999px) {
-  #gallery .wrap .list li {
-    width: 33.3333333333%;
-  }
-}
-@media screen and (max-width: 749px) {
-  #gallery .wrap .list li {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 539px) {
-  #gallery .wrap .list li {
-    width: 100%;
-  }
-}
 .join .inner h2 {
   font: bold 18px/1 "arial";
   color: #555;
@@ -1247,56 +1178,54 @@ table {
   background-position: center;
   background-size: cover;
 }
-
-.content {
+.youtube_body .content {
   width: 100%;
   height: 85vh;
   padding-top: 100px;
 }
-.content .inner {
+.youtube_body .content .inner {
   width: 1180px;
   height: 100%;
   margin: 0 auto;
   position: relative;
 }
-.content .inner .vidList {
+.youtube_body .content .inner .vidList {
   width: 100%;
 }
-.content .inner .vidList article {
+.youtube_body .content .inner .vidList article {
   position: absolute;
   left: 50%;
   top: 45%;
   transform: translate(-50%, -50%);
   width: 60%;
 }
-.content .inner .vidList article .pic {
+.youtube_body .content .inner .vidList article .pic {
   display: block;
   width: 100%;
   height: 60%;
   margin-bottom: 30px;
 }
-.content .inner .vidList article .pic img {
+.youtube_body .content .inner .vidList article .pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
-.content .inner h1 {
+.youtube_body .content .inner h1 {
   font: normal 50px/1 "arial";
   color: #fff;
   text-align: center;
 }
-.content .inner h1 span {
+.youtube_body .content .inner h1 span {
   font: normal 20px/1 "맑은 고딕";
   color: #aaa;
 }
-.content .inner h1 span::before {
+.youtube_body .content .inner h1 span::before {
   content: "/";
   margin-right: 20px;
   margin-left: 10px;
 }
-
-figure.pop {
+.youtube_body figure.pop {
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -1309,11 +1238,11 @@ figure.pop {
   align-content: center;
   background: rgba(0, 0, 0, 0.7);
 }
-figure.pop iframe {
+.youtube_body figure.pop iframe {
   width: 100%;
   height: 100%;
 }
-figure.pop .btnClose {
+.youtube_body figure.pop .btnClose {
   position: absolute;
   top: 50px;
   right: 50px;

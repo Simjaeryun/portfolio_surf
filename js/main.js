@@ -12,6 +12,14 @@ let posArr = [];
 const base = -300;
 let enableClick = true;
 
+const showBtn = document.querySelector(".header_show");
+const header = document.querySelector(".header")
+showBtn.addEventListener("mouseenter", (e) => {
+    console.log(e.currentTarget.closest(".header"))
+    e.currentTarget.closest(".header").classList.toggle("on")
+})
+
+
 productLogo.forEach((el, index) => {
     el.addEventListener("click", e => {
         e.preventDefault();

@@ -68,6 +68,7 @@ function callData(url) {
 
 //fetch한 값으로 반복문 돌면서 html만들기 
 function createList(items) {
+
     //htmls 변수에 빈문자열 저장 
     let htmls = ""
     const nextBtn = document.createElement("div");
@@ -75,13 +76,12 @@ function createList(items) {
     nextBtn.classList.add("swiper-button-next");
     prevBtn.classList.add("swiper-button-prev")
     items.map(data => {
-        const imgSrc = `https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_m.jpg`;
-
-        const imgSrcBig = `https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_b.jpg`;
+        console.log(data)
+        const imgSrc = `https://live.staticflickr.com/${data.server}/${data.id}_${data.secret}_b.jpg`;
 
         htmls += `
         <div class="item swiper-slide"> 
-                <a href="${imgSrcBig}">
+                <a href="${imgSrc}">
                     <img src="${imgSrc}" alt="">
                 </a>
         </div>

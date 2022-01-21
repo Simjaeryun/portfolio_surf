@@ -2,13 +2,17 @@
 
 /* Header_sub */
 .header_sub {
-	padding-top: 4vh;
 	width: 100%;
-	height: 8vh;
+	height: 12vh;
 	z-index: 2;
 	position: fixed;
-	top: 0;
+	top: -12vh;
 	left: 0;
+	background: rgba(0, 0, 0, 0.3);
+	transition: 1s;
+	&.on {
+		top: 0;
+	}
 	.inner {
 		margin: auto;
 		width: 1180px;
@@ -18,6 +22,7 @@
 		.header_sub_title {
 			width: 150px;
 			margin-right: 0px;
+			filter: brightness(100);
 			img {
 				width: 100%;
 			}
@@ -53,6 +58,15 @@
 				font-family: "Noto Sans", sans-serif;
 			}
 		}
+	}
+	.header_sub_show {
+		position: absolute;
+		width: 100%;
+		z-index: 20;
+		bottom: -6vh;
+		text-align: center;
+		font-size: 60px;
+		cursor: pointer;
 	}
 }
 

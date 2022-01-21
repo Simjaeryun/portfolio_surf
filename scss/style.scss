@@ -24,6 +24,26 @@
 body {
 	overflow-x: hidden;
 }
+.nav_btns {
+	position: fixed;
+	right: 50px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 5;
+	li {
+		width: 20px;
+		height: 20px;
+		border-radius: 10px;
+		background: #000;
+		cursor: pointer;
+		margin-bottom: 20px;
+		transition: 0.5s;
+		&.on {
+			height: 80px;
+			background: #111;
+		}
+	}
+}
 
 /* tablet 구간 */
 @media screen and (max-width: $tabletSize) {

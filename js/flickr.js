@@ -142,10 +142,7 @@ function galLoading() {
 }
 
 
-
-
 function swiper() {
-
     loading.classList.add("off")
     let swiper = new Swiper(".mySwiper", {
         slidesPerView: 3,

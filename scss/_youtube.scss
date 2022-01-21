@@ -1,6 +1,7 @@
 #header_sub {
+	padding-top: 2vh;
 	width: 100%;
-	height: 15vh;
+	height: 8vh;
 	z-index: 2;
 	position: fixed;
 	top: 0;
@@ -56,6 +57,9 @@
 	padding-top: 15vh;
 	width: 100%;
 	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background: url(../img/test.jpg);
 	background-position: center;
 	background-size: cover;
@@ -75,14 +79,20 @@
 		height: 100%;
 		margin: 0 auto;
 		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		.vidList {
 			width: 100%;
+			height: 100%;
+			position: relative;
+
 			article {
 				position: absolute;
 				left: 50%;
 				top: 45%;
 				transform: translate(-50%, -50%);
-				width: 60%;
+				width: 80%;
 				.pic {
 					display: block;
 					width: 100%;
@@ -127,7 +137,7 @@ figure.pop {
 	justify-content: center;
 	align-content: center;
 	background: rgba(0, 0, 0, 0.7);
-	z-index: 3;
+	z-index: 10;
 	iframe {
 		width: 100%;
 		height: 100%;
@@ -163,6 +173,131 @@ figure.pop {
 }
 
 @media screen and (max-width: $tabletSize) {
+	#header_sub {
+		width: 100%;
+		height: 15vh;
+		z-index: 2;
+		position: fixed;
+		top: 0;
+		left: 0;
+		.inner {
+			margin: auto;
+			width: 1180px;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			.header_sub_title {
+				width: 150px;
+				margin-right: 0px;
+				img {
+					width: 100%;
+				}
+			}
+			.header_sub_nav {
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+				align-items: center;
+				#gnb {
+					margin-left: 30px;
+					width: 60%;
+					display: flex;
+					justify-content: space-around;
+					li {
+						a {
+							color: #000;
+							font-family: "Lalezar", cursive;
+							font-size: 20px;
+							&:hover {
+								text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+							}
+						}
+					}
+				}
+			}
+			.header_sub_status {
+				a {
+					display: block;
+					border: 3px solid aqua;
+					padding: 5px 20px;
+					color: #000;
+					font-family: "Noto Sans", sans-serif;
+				}
+			}
+		}
+	}
+
+	.youtube {
+		.inner {
+			width: 100%;
+			.vidList {
+				width: 100%;
+				article {
+					width: 80%;
+					.pic {
+						img {
+						}
+					}
+				}
+			}
+			h1 {
+				span {
+				}
+			}
+		}
+	}
+
+	figure.pop {
+		width: 100%;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		padding: 5vw;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		background: rgba(0, 0, 0, 0.7);
+
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
+
+		.btnClose {
+			position: absolute;
+			top: 50px;
+			right: 50px;
+			color: #fff;
+			cursor: pointer;
+		}
+	}
+
+	.btns {
+		position: fixed;
+		top: 850px;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		li {
+			width: 20px;
+			height: 20px;
+			border-radius: 10px;
+			background: #fff;
+			margin-right: 20px;
+			cursor: pointer;
+			margin-bottom: 20px;
+			transition: 0.5s;
+			&.on {
+				height: 20px;
+				width: 60px;
+				background: #111;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: $mobileSize) {

@@ -58,6 +58,37 @@ fetch(url)
     })
 
 
+for (const el of vidLists) {
+    el.addEventListener("click", e => {
+        e.preventDefault();
+        if (!e.target.closest("a")) {
+            return;
+        }
+        const vidId = e.target.closest("a").getAttribute("href");
+        let pop = document.createElement("figure");
+        pop.classList.add("pop");
+        pop.innerHTML = `
+                                    <iframe src="https://www.youtube.com/embed/${vidId}" frameborder="0" allowfullscreen> </iframe>
+                                    <span class="btnClose">Close</span>
+                                      `;
+        el.append(pop)
+    })
+
+
+    el.addEventListener("click", e => {
+        e.preventDefault();
+        const pop = el.querySelector(".pop")
+        if (pop) {
+            const close = pop.querySelector("span");
+            if (e.target === close) {
+                pop.remove()
+            }
+        }
+    })
+
+}
+
+
 
 // Scroll Event
 const posReset = (arr) => {

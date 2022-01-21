@@ -1,40 +1,53 @@
-.vidList {
+.youtube_body {
+	background: url(../img/test.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+.content {
 	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-content: flex-start;
-	article {
-		width: 48%;
-		margin-bottom: 40px;
-		.pic {
-			display: block;
+	height: 85vh;
+	padding-top: 100px;
+	.inner {
+		width: 1180px;
+		height: 100%;
+		margin: 0 auto;
+		position: relative;
+		.vidList {
 			width: 100%;
-			height: 60%;
-			margin-bottom: 30px;
-			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
+			article {
+				position: absolute;
+				left: 50%;
+				top: 45%;
+				transform: translate(-50%, -50%);
+				width: 60%;
+				.pic {
+					display: block;
+					width: 100%;
+					height: 60%;
+					margin-bottom: 30px;
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+					}
+				}
 			}
 		}
-		.con {
-			width: 100%;
-			height: 40%;
+		h1 {
+			font: normal 50px/1 "arial";
+			color: #fff;
+			text-align: center;
 
-			h2 {
-				font: bold 20px/1.2 "arial";
-				color: #444;
-				margin-bottom: 15px;
-			}
-			p {
-				font: 14px/1.4 "arial";
-				color: #666;
-				margin-bottom: 20px;
-			}
 			span {
-				font: bold 14px/1 "arial";
-				color: orange;
+				font: normal 20px/1 "맑은 고딕";
+				color: #aaa;
+				&::before {
+					content: "/";
+					margin-right: 20px;
+					margin-left: 10px;
+				}
 			}
 		}
 	}

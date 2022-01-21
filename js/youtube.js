@@ -31,13 +31,8 @@ fetch(url)
             result += `
                 <article>
                     <a href="${item.snippet.resourceId.videoId}" class="pic">
-                        <img src="${item.snippet.thumbnails.medium.url}" alt="">
+                        <img src="${item.snippet.thumbnails.maxres.url}" alt="">
                     </a>
-                    <div class="con">
-                        <h2>${title}</h2>
-                        <p>${con}</p>
-                        <span>${date}</span>
-                    </div>
                  </article>
             `
         })

@@ -1,11 +1,12 @@
-#header {
-	padding-top: 2vh;
+.header {
+	padding-top: 4vh;
 	width: 100%;
 	height: 8vh;
 	z-index: 3;
 	position: fixed;
 	top: 0;
 	left: 0;
+
 	.inner {
 		margin: auto;
 		width: 1180px;
@@ -16,6 +17,7 @@
 			width: 150px;
 			margin-right: 0px;
 			img {
+				filter: brightness(100);
 				width: 100%;
 			}
 		}
@@ -31,7 +33,7 @@
 				justify-content: space-around;
 				li {
 					a {
-						color: #000;
+						color: #fff;
 						font-family: "Lalezar", cursive;
 						font-size: 20px;
 						&:hover {
@@ -46,7 +48,7 @@
 				display: block;
 				border: 3px solid aqua;
 				padding: 5px 20px;
-				color: #000;
+				color: #fff;
 				font-family: "Noto Sans", sans-serif;
 			}
 		}

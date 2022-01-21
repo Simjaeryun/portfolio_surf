@@ -2,14 +2,14 @@ const gallery = document.querySelector("#gallery")
 const galleryWrap = document.querySelector("#gallery .wrap")
 const galList = document.querySelector("#gallery .wrap .list");
 const key = "f7cfb698e2ac45b786af0b554ec7cd09";
-const base = "https://www.flickr.com/services/rest/?";
+const flickr_base = "https://www.flickr.com/services/rest/?";
 const method1 = "flickr.interestingness.getList";
 const method2 = "flickr.photos.search"
 const per_page = 50;
 const format = "json";
 const btnSearch = document.querySelector(".btnSearch")
 const input = gallery.querySelector("#search")
-const url = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=wave&privacy_filter=1`;
+const url = `${flickr_base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=wave&privacy_filter=1`;
 const body = document.querySelector("body")
 const loading = document.querySelector(".loading")
 callData(url);
@@ -20,7 +20,7 @@ btnSearch.addEventListener("click", e => {
     let tag = input.value;
     tag = tag.trim(); // 공백제거
     //키워드를 통한 이미지를 요청하는 주소 
-    const url = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
+    const url = `${flickr_base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
     if (tag != "") {
         callData(url);
     } else {
@@ -38,7 +38,7 @@ input.addEventListener("keypress", e => {
         let tag = input.value;
         tag = tag.trim();
         //키워드를 통한 이미지를 요청하는 주소 
-        const url = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
+        const url = `${flickr_base}method=${method2}&api_key=${key}&per_page=${per_page}&format=${format}&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
         if (tag != "") {
             callData(url);
         } else {

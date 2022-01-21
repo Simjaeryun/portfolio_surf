@@ -1,11 +1,20 @@
-
-
-const vidList = document.querySelector(".vidList");
+//youtube Api , Dom생성
+const vidLists = document.querySelectorAll(".vidList");
 const key = "AIzaSyDTqpCGvBZz_l-UfWUkSY-UWyzxgO58z2I";
 const playListId = "PLsGbxh85lJXJyWJZ07m7tRiDPqQJNAlZL";
 const num = 5;
 const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playListId}&maxResult=${num}`;
 
+// Scroll event 변수
+const sections = document.querySelectorAll("section");
+const lis = document.querySelectorAll(".btns li");
+const activeBtn = document.querySelector(".btns li.on")
+const btns_arr = Array.from(lis); // 유사배열을 배열로 만든다
+const len = sections.length;
+const base = -300;
+let posArr = [];
+
+//Youtbe Api
 fetch(url)
     .then(data => {
         return data.json();
@@ -15,8 +24,9 @@ fetch(url)
         console.log(items)
         let result = '';
 
-        items.map(item => {
+        items.map((item) => {
             let title = item.snippet.title
+
             if (title.length > 30) {
                 title = title.substr(0, 30) + "..."
             }
@@ -36,32 +46,80 @@ fetch(url)
                  </article>
             `
         })
-        vidList.innerHTML = result;
+        for (const el of vidLists) {
+            el.innerHTML = result;
+        }
+
+        for (let i = 0; i < sections.length; i++) {
+            sections[i].querySelectorAll("article")[i].style.zIndex = "5"
+        }
+
+
     })
 
 
-vidList.addEventListener("click", e => {
-    e.preventDefault();
-    if (!e.target.closest("a")) {
-        return;
+
+// Scroll Event
+const posReset = (arr) => {
+    posArr = [];
+    for (let el of arr) {
+        posArr.push(el.offsetTop)
     }
-    const vidId = e.target.closest("a").getAttribute("href");
-    let pop = document.createElement("figure");
-    pop.classList.add("pop");
-    pop.innerHTML = `
-                            <iframe src="https://www.youtube.com/embed/${vidId}" frameborder="0" allowfullscreen> </iframe>
-                            <span class="btnClose">Close</span>
-                              `;
-    vidList.append(pop)
+}
+
+posReset(sections)
+
+window.addEventListener("resize", () => {
+    posReset(sections)
 })
 
-vidList.addEventListener("click", e => {
+window.addEventListener("mousewheel", e => {
     e.preventDefault();
-    const pop = vidList.querySelector(".pop")
-    if (pop) {
-        const close = pop.querySelector("span");
-        if (e.target === close) {
-            pop.remove()
+    let activeItem = document.querySelector(".btns li.on");
+    let activeIndex = btns_arr.indexOf(activeItem);
+
+    if (e.deltaY < 0) {
+        //마우스 휠을 올릴 때
+        if (activeIndex === 0) {
+            return;
         }
+        targetIndex = activeIndex - 1;
+    } else {
+        //마우스 휠을 내릴 때
+        if (activeIndex === len - 1) {
+            return;
+        }
+        targetIndex = activeIndex + 1;
     }
+    new Anime(window, {
+        prop: "scroll",
+        value: posArr[targetIndex],
+        duration: 500,
+    })
+}, { passive: false })
+
+window.addEventListener("scroll", e => {
+    let scroll = window.scrollY || window.pageYOffset;
+
+    sections.forEach((el, index) => {
+        if (scroll >= posArr[index] + base) {
+            lis.forEach((el, index) => {
+                el.classList.remove("on");
+                sections[index].classList.remove("on");
+            })
+            lis[index].classList.add("on");
+            el.classList.add("on");
+        }
+    })
 })
+
+lis.forEach((el, index) => {
+    el.addEventListener("click", (e) => {
+        new Anime(window, {
+            prop: "scroll",
+            value: posArr[index],
+            duration: 500,
+        })
+    })
+})
+
